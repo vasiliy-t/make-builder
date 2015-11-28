@@ -1,11 +1,9 @@
-make-builder
-============
+# make-builder
 
-Usage
------
+### Usage
 
-Assuming that your project at /data/project and there is a Makefile in project root directory with build target.
+Assuming that your are running next command in project root dir and there is a Makefile in project root dir.
 
 ```bash
-docker run --rm -v /data:/data -w /data/project -v /var/run/docker.sock:/var/run/docker.sock -v /var/run/docker.pid:/var/run/docker.pid -v /usr/bin/docker:/usr/bin/docker leanlabs/make-builder build
+docker run --rm -v `pwd`:/data -v /var/run/docker.sock:/var/run/docker.sock -v /var/run/docker.pid:/var/run/docker.pid -v /usr/bin/docker:/usr/bin/docker leanlabs/make-builder build
 ```
